@@ -4,6 +4,7 @@ var	morgan  	= 	require('morgan');
 var db          =   mongojs('bucketlistapp', ['appUsers','bucketLists']);
 var server      =   restify.createServer();
 var baseURL		=   'http://localhost:9804/api/v1/bucketList';
+
 var mqtt 		= 	require('mqtt')  
 var mqttClient 	= 	mqtt.connect('mqtt://broker.hivemq.com')  
 
