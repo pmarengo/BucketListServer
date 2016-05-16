@@ -18,7 +18,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
         	$rootScope.notify("Please enter valid credentials");
         	return false;
         }
-        $rootScope.show('Please wait.. Authenticating');
+        //$rootScope.show('Please wait.. Authenticating');
         API.signin({
             email: email,
             password: password
@@ -49,7 +49,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
         	$rootScope.notify("Please enter valid data");
         	return false;
         }
-        $rootScope.show('Please wait.. Registering');
+        //$rootScope.show('Please wait.. Registering');
         API.signup({
             email: email,
             password: password,
@@ -109,7 +109,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
     $rootScope.$broadcast('fetchAll');
 
     $scope.markCompleted = function (id) {
-        $rootScope.show("Please wait... Updating List");
+        //$rootScope.show("Please wait... Updating List");
         API.putItem(id, {
             isCompleted: true
         }, $rootScope.getToken())
@@ -125,7 +125,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
 
 
     $scope.deleteItem = function (id) {
-        $rootScope.show("Please wait... Deleting from List");
+        //$rootScope.show("Please wait... Deleting from List");
         API.deleteItem(id, $rootScope.getToken())
             .success(function (data, status, headers, config) {
                 $rootScope.hide();
@@ -172,7 +172,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
         
         $rootScope.$broadcast('fetchCompleted');
         $scope.deleteItem = function (id) {
-            $rootScope.show("Please wait... Deleting from List");
+            //$rootScope.show("Please wait... Deleting from List");
             API.deleteItem(id, $rootScope.getToken())
                 .success(function (data, status, headers, config) {
                     $rootScope.hide();
@@ -199,7 +199,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
             $scope.modal.hide();
             $rootScope.show();
             
-            $rootScope.show("Please wait... Creating new");
+            //$rootScope.show("Please wait... Creating new");
 
             var form = {
                 item: item,
