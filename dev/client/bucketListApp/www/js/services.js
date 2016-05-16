@@ -1,6 +1,6 @@
 angular.module('bucketList.services', [])
     .factory('API', function ($rootScope, $http, $ionicLoading, $window) {
-       var base = "http://172.16.6.14:9804/api/v1/bucketList";
+       var base = "http://172.16.6.14:9804";
         $rootScope.show = function (text) {
             $rootScope.loading = $ionicLoading.show({
                 content: text ? text : 'Loading',
