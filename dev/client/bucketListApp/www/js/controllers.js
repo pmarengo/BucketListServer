@@ -76,7 +76,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
 .controller('myListCtrl', function ($rootScope, $scope, API, $timeout, $ionicModal, $window) {
     $rootScope.$on('fetchAll', function(){
             API.getAll($rootScope.getToken()).success(function (data, status, headers, config) {
-            $rootScope.show("Please wait... Processing");
+           // $rootScope.show("Please wait... Processing");
             $scope.list = [];
             for (var i = 0; i < data.length; i++) {
                 if (data[i].isCompleted == false) {
